@@ -18,4 +18,12 @@ public class BookController {
         return bookMapper.findAll();
     }
 
+    @GetMapping("/books/search")
+    public List<Book> findByTitle(BookSearchRequest request) {
+        System.out.println(request.getStartsWith());
+        System.out.println(request.getEndsWith());
+        System.out.println(request.getContains());
+        return bookMapper.findByTitle(request.getStartsWith(), request.getEndsWith(), request.getContains());
+    }
+
 }
