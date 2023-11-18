@@ -12,15 +12,15 @@ public class BookSearchRequest {
     }
 
     public String getStartsWith() {
-        return startsWith;
+        return startsWith == null ? "" : startsWith;
     }
 
     public String getEndsWith() {
-        return endsWith;
+        return endsWith == null ? "" : endsWith;
     }
 
     public String getContains() {
-        return contains;
+        return contains == null ? "" : contains;
     }
 
     public void setStartsWith(String startsWith) {
